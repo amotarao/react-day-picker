@@ -1,7 +1,3 @@
-packages:
-  - website
-  - examples-app
-
 onlyBuiltDependencies:
   - '@swc/core'
   - esbuild
