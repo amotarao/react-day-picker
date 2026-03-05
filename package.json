@@ -1,9 +1,9 @@
 {
-  "name": "react-day-picker",
+  "name": "@amotarao/react-day-picker",
   "version": "9.14.0",
   "description": "Customizable Date Picker for React",
-  "author": "Giampaolo Bellavite <io@gpbl.dev>",
-  "homepage": "https://daypicker.dev",
+  "author": "Amon Sawamura",
+  "homepage": "https://github.com/amotarao/react-day-picker",
   "packageManager": "pnpm@10.24.0",
   "engines": {
     "node": ">=18"
@@ -11,10 +11,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gpbl/react-day-picker"
+    "url": "https://github.com/amotarao/react-day-picker"
   },
   "bugs": {
-    "url": "https://github.com/gpbl/react-day-picker/issues"
+    "url": "https://github.com/amotarao/react-day-picker/issues"
   },
   "main": "./dist/cjs/index.js",
   "types": "./dist/cjs/index.d.ts",
@@ -278,9 +278,5 @@
   },
   "peerDependencies": {
     "react": ">=16.8.0"
-  },
-  "funding": {
-    "type": "individual",
-    "url": "https://github.com/sponsors/gpbl"
   }
 }
