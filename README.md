@@ -1,4 +1,4 @@
-# @amotarao/react-day-picker
+# react-day-picker-gregorian-only
 
 > Fork of [react-day-picker](https://github.com/gpbl/react-day-picker) with non-Gregorian calendar plugins removed.
 
@@ -11,14 +11,14 @@ DayPicker is a [React](https://react.dev) component for creating date pickers, c
 ## Installation
 
 ```bash
-npm install @amotarao/react-day-picker
+npm install react-day-picker-gregorian-only
 ```
 
 ## Example
 
 ```tsx
-import { DayPicker } from "@amotarao/react-day-picker";
-import "@amotarao/react-day-picker/style.css";
+import { DayPicker } from "react-day-picker-gregorian-only";
+import "react-day-picker-gregorian-only/style.css";
 
 function MyDatePicker() {
   const [selected, setSelected] = useState<Date>();

@@ -1,5 +1,5 @@
 {
-  "name": "@amotarao/react-day-picker",
+  "name": "react-day-picker-gregorian-only",
   "version": "0.1.0",
   "description": "Customizable Date Picker for React",
   "author": "Amon Sawamura",
