@@ -1,6 +1,10 @@
 # @amotarao/react-day-picker
 
-> Fork of [react-day-picker](https://github.com/gpbl/react-day-picker) with non-Gregorian calendar support removed.
+> Fork of [react-day-picker](https://github.com/gpbl/react-day-picker) with non-Gregorian calendar plugins removed.
+
+This fork removes the calendar plugins (Hijri, Persian/Jalali, Buddhist, Ethiopic, Hebrew) that were added to the upstream package, keeping only Gregorian calendar support. The motivation is to reduce bundle size for projects that do not need these calendars.
+
+> **Discussion:** A proposal to make calendar plugins opt-in (or separable) is open at [gpbl/react-day-picker#2910](https://github.com/gpbl/react-day-picker/discussions/2910). If the upstream adopts this approach, this fork may no longer be necessary.
 
 DayPicker is a [React](https://react.dev) component for creating date pickers, calendars, and date inputs for web applications.
 
