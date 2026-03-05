@@ -1,16 +1,7 @@
 import React from "react";
 import type { Locale } from "react-day-picker";
 import { DateLib } from "react-day-picker";
-import {
-  amET,
-  getDateLib as getDateLibEthiopic,
-} from "react-day-picker/ethiopic";
-import { arSA, getDateLib as getDateLibHijri } from "react-day-picker/hijri";
 import * as locales from "react-day-picker/locale";
-import {
-  faIR,
-  getDateLib as getDateLibPersian,
-} from "react-day-picker/persian";
 
 import styles from "./styles.module.css";
 import type { DayPickerPropsWithCalendar } from "./useQueryStringSync";
@@ -23,27 +14,6 @@ interface CustomizationFieldsetProps {
 }
 
 function resolveDateLib(props: DayPickerPropsWithCalendar) {
-  if (props.calendar === "persian") {
-    return getDateLibPersian({
-      locale: (props.locale as Locale) ?? faIR,
-      timeZone: props.timeZone,
-      numerals: props.numerals,
-    });
-  }
-  if (props.calendar === "ethiopic") {
-    return getDateLibEthiopic({
-      locale: (props.locale as Locale) ?? (amET as Locale),
-      timeZone: props.timeZone,
-      numerals: props.numerals,
-    });
-  }
-  if (props.calendar === "hijri") {
-    return getDateLibHijri({
-      locale: (props.locale as Locale) ?? (arSA as Locale),
-      timeZone: props.timeZone,
-      numerals: props.numerals,
-    });
-  }
   return new DateLib({
     locale: (props.locale as Locale) ?? locales.enUS,
     timeZone: props.timeZone,

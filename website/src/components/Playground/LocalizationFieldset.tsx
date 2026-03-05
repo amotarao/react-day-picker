@@ -6,21 +6,7 @@ import {
   defaultDateLib,
   type Numerals,
 } from "react-day-picker";
-import {
-  enUS as enUSBuddhist,
-  th as thBuddhist,
-} from "react-day-picker/buddhist";
-import {
-  amET as amETEthiopic,
-  enUS as enUSEthiopic,
-} from "react-day-picker/ethiopic";
-import { enUS as enUSHebrew, he as heHebrew } from "react-day-picker/hebrew";
-import { arSA as arSAHijri, enUS as enUSHijri } from "react-day-picker/hijri";
 import * as locales from "react-day-picker/locale";
-import {
-  enUS as enUSPersian,
-  faIR as faIRPersian,
-} from "react-day-picker/persian";
 
 import styles from "./styles.module.css";
 import type { DayPickerPropsWithCalendar } from "./useQueryStringSync";
@@ -83,19 +69,7 @@ const numerals: { value: Numerals; label: string }[] = [
   { value: "laoo", label: "Lao" },
   { value: "tibt", label: "Tibetan" },
 ];
-const calendars: (
-  | "persian"
-  | "hijri"
-  | "ethiopic"
-  | "buddhist"
-  | "gregorian"
-  | "hebrew"
-)[] = ["gregorian", "persian", "hijri", "ethiopic", "buddhist", "hebrew"];
-const persianLocales = { faIR: faIRPersian, enUS: enUSPersian };
-const hijriLocales = { arSA: arSAHijri, enUS: enUSHijri };
-const ethiopicLocales = { amET: amETEthiopic, enUS: enUSEthiopic };
-const buddhistLocales = { th: thBuddhist, enUS: enUSBuddhist };
-const hebrewLocales = { he: heHebrew, enUS: enUSHebrew };
+const calendars: "gregorian"[] = ["gregorian"];
 
 type CalendarType = NonNullable<DayPickerPropsWithCalendar["calendar"]>;
 
@@ -103,11 +77,6 @@ const allLocales = Object.values(locales) as DayPickerProps["locale"][];
 
 const calendarLocales: Record<CalendarType, DayPickerProps["locale"][]> = {
   gregorian: allLocales,
-  persian: Object.values(persianLocales),
-  hijri: Object.values(hijriLocales),
-  ethiopic: Object.values(ethiopicLocales),
-  buddhist: Object.values(buddhistLocales),
-  hebrew: Object.values(hebrewLocales),
 };
 
 const calendarDefaults: Partial<
@@ -119,13 +88,7 @@ const calendarDefaults: Partial<
       numerals?: Numerals;
     }
   >
-> = {
-  persian: { locale: faIRPersian, dir: "rtl" },
-  hijri: { locale: arSAHijri, dir: "rtl", numerals: "arab" as Numerals },
-  ethiopic: { locale: amETEthiopic, numerals: "geez" as Numerals },
-  buddhist: { locale: thBuddhist, numerals: "thai" as Numerals },
-  hebrew: { numerals: "latn" as Numerals },
-};
+> = {};
 
 function getLocalesForCalendar(
   calendar?: DayPickerPropsWithCalendar["calendar"],
